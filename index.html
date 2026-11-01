@@ -1,0 +1,696 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>دفترچه سلطنتی</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@1,500&family=Vazirmatn:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: a Pinterest-style masonry board of pastel cards under a crowned hero. Each card has its own tint. */
+:root {
+  --bg: #fde9f0;
+  --glow1: #f9c6da;
+  --glow2: #e9d8fb;
+  --card: #fffafc;
+  --card-rose: #fff1f6;
+  --card-lilac: #f6efff;
+  --field: #ffffff;
+  --ink: #4b2a3b;
+  --muted: #8a5a70;
+  --rose: #ee86ab;
+  --rose-deep: #b23d6f;
+  --blush: #fde0ea;
+  --gold: #c79a5c;
+  --line: #f3c9d9;
+  --shadow: rgba(194, 72, 122, 0.16);
+  --btn1: #d65a8d;
+  --btn2: #b03a6e;
+  --font-display: 'Aref Ruqaa', 'Vazirmatn', Tahoma, serif;
+  --font-body: 'Vazirmatn', Tahoma, system-ui, sans-serif;
+  --font-latin: 'Cormorant Garamond', Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #231020;
+    --glow1: #4a1d3f;
+    --glow2: #2f2a52;
+    --card: #351b30;
+    --card-rose: #3d1d35;
+    --card-lilac: #2f2447;
+    --field: #2a1426;
+    --ink: #fde8f1;
+    --muted: #d4abc0;
+    --rose: #f08cb0;
+    --rose-deep: #f6a0c2;
+    --blush: #4d2542;
+    --gold: #e3c08a;
+    --line: #5c3454;
+    --shadow: rgba(0, 0, 0, 0.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #231020;
+  --glow1: #4a1d3f;
+  --glow2: #2f2a52;
+  --card: #351b30;
+  --card-rose: #3d1d35;
+  --card-lilac: #2f2447;
+  --field: #2a1426;
+  --ink: #fde8f1;
+  --muted: #d4abc0;
+  --rose: #f08cb0;
+  --rose-deep: #f6a0c2;
+  --blush: #4d2542;
+  --gold: #e3c08a;
+  --line: #5c3454;
+  --shadow: rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(40rem 28rem at 90% -5%, var(--glow1), transparent 70%),
+    radial-gradient(34rem 26rem at 0% 30%, var(--glow2), transparent 70%),
+    radial-gradient(30rem 24rem at 80% 100%, var(--glow1), transparent 70%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px;
+}
+.app { max-width: 72rem; margin-inline: auto; }
+button, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--rose-deep); outline-offset: 2px; }
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.25rem 2rem;
+  align-items: center;
+  padding: 2rem clamp(1.1rem, 4vw, 2.5rem) 1.5rem;
+  background: linear-gradient(160deg, var(--card-rose), var(--card) 55%, var(--card-lilac));
+  border: 1.5px solid var(--line);
+  border-radius: 2rem;
+  box-shadow: 0 18px 50px -22px var(--shadow);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0.55rem;
+  border: 1px dashed var(--gold);
+  border-radius: 1.6rem;
+  opacity: 0.55;
+  pointer-events: none;
+}
+.hero > * { position: relative; min-width: 0; }
+.crest { width: 4.2rem; }
+.crest svg { width: 100%; height: auto; display: block; }
+.eyebrow { margin: 0.5rem 0 0; color: var(--rose-deep); font-weight: 500; font-size: 0.95rem; }
+h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 8vw, 3.8rem);
+  line-height: 1.25;
+  text-wrap: balance;
+  color: var(--ink);
+}
+.date { margin: 0.25rem 0 0; font-size: 1.1rem; font-weight: 500; }
+.date-en {
+  margin: 0;
+  font-family: var(--font-latin);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--gold);
+  text-align: right;
+}
+.hero-side { display: flex; align-items: center; gap: 1rem; }
+.ring { position: relative; width: 6.2rem; height: 6.2rem; flex: none; }
+.ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring .track { stroke: var(--line); }
+.ring .prog { stroke: var(--rose-deep); stroke-linecap: round; transition: stroke-dashoffset 0.6s ease; }
+.ring-num {
+  position: absolute; inset: 0;
+  display: grid; place-content: center; text-align: center;
+  font-weight: 600; font-size: 1.25rem; line-height: 1.2;
+}
+.ring-num small { font-size: 0.7rem; font-weight: 400; color: var(--muted); }
+.affirm { max-width: 15rem; margin: 0; font-size: 0.95rem; color: var(--muted); }
+.affirm b { display: block; color: var(--rose-deep); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.03em; margin-bottom: 0.15rem; }
+.daynav {
+  grid-column: 1 / -1;
+  display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.daynav .spacer { flex: 1 1 0; }
+.spark { position: absolute; width: 1rem; height: 1rem; fill: var(--gold); opacity: 0.8; }
+.spark.s1 { top: 1.4rem; left: 22%; }
+.spark.s2 { top: 4.5rem; left: 8%; width: 0.65rem; height: 0.65rem; }
+.spark.s3 { bottom: 5rem; left: 38%; width: 0.75rem; height: 0.75rem; }
+.spark.s4 { top: 1.8rem; right: 8rem; width: 0.7rem; height: 0.7rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .spark { animation: twinkle 3.6s ease-in-out infinite; }
+  .spark.s2 { animation-delay: 0.9s; }
+  .spark.s3 { animation-delay: 1.7s; }
+  .spark.s4 { animation-delay: 2.4s; }
+  @keyframes twinkle { 0%, 100% { opacity: 0.25; transform: scale(0.8); } 50% { opacity: 0.95; transform: scale(1.1); } }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  background: var(--field);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn:hover:not(:disabled) { border-color: var(--rose); background: var(--blush); }
+.btn:disabled { opacity: 0.45; cursor: default; }
+.btn svg { width: 1rem; height: 1rem; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--btn1), var(--btn2));
+  border-color: transparent;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 8px 18px -10px var(--btn2);
+}
+.btn-primary:hover:not(:disabled) { background: linear-gradient(135deg, var(--btn1), var(--btn2)); border-color: transparent; filter: brightness(1.07); }
+
+.note {
+  margin: 1rem 0 0; padding: 0.7rem 1rem;
+  background: var(--blush); border-radius: 1rem; color: var(--rose-deep); font-size: 0.9rem;
+}
+
+/* Board */
+.board { column-width: 19.5rem; column-gap: 1.25rem; margin-top: 1.5rem; }
+.card {
+  break-inside: avoid;
+  margin: 0 0 1.25rem;
+  padding: 1.35rem 1.25rem 1.25rem;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 1.75rem;
+  box-shadow: 0 16px 36px -24px var(--shadow);
+}
+.card.rose { background: var(--card-rose); }
+.card.lilac { background: var(--card-lilac); }
+.card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.9rem; }
+h2 {
+  position: relative;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
+.chip {
+  flex: none;
+  padding: 0.05rem 0.7rem;
+  background: var(--blush);
+  color: var(--rose-deep);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.divider { height: 1px; margin: 0 0 0.6rem; background: linear-gradient(90deg, var(--gold), transparent); opacity: 0.7; border: 0; }
+.hint { margin: 0.6rem 0 0; font-size: 0.82rem; color: var(--muted); }
+.empty { margin: 0.4rem 0 0.8rem; color: var(--muted); font-size: 0.92rem; }
+
+/* Lists */
+.list { list-style: none; margin: 0; padding: 0; }
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.65rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+.item:last-child { border-bottom: 0; }
+.item label { cursor: pointer; display: block; min-width: 0; overflow-wrap: anywhere; padding-top: 0.1rem; }
+.time {
+  display: inline-block;
+  margin-inline-end: 0.5rem;
+  padding: 0 0.55rem;
+  background: var(--blush);
+  color: var(--rose-deep);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.badge { margin-inline-start: 0.4rem; font-size: 0.72rem; color: var(--gold); font-weight: 500; }
+.item.done .txt { text-decoration: line-through; color: var(--muted); }
+.chk {
+  appearance: none; -webkit-appearance: none;
+  width: 1.5rem; height: 1.5rem; margin: 0.1rem 0 0;
+  border: 2px solid var(--rose);
+  border-radius: 50%;
+  background-color: var(--field);
+  background-position: center; background-repeat: no-repeat; background-size: 72%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.chk:checked {
+  background-color: var(--rose-deep);
+  border-color: var(--rose-deep);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E");
+}
+.del {
+  width: 1.9rem; height: 1.9rem; display: grid; place-content: center;
+  background: transparent; border: 0; border-radius: 50%; color: var(--muted); cursor: pointer;
+}
+.del:hover { background: var(--blush); color: var(--rose-deep); }
+.del svg { width: 0.9rem; height: 0.9rem; stroke: currentColor; fill: none; stroke-width: 2.4; stroke-linecap: round; }
+
+/* Forms */
+.add { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+.add .t { flex: 0 0 7.2rem; }
+.add .x { flex: 1 1 10rem; min-width: 0; }
+.field {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  background: var(--field);
+  border: 1.5px solid var(--line);
+  border-radius: 0.9rem;
+}
+.field::placeholder { color: var(--muted); opacity: 0.75; }
+.field:focus { border-color: var(--rose); }
+
+/* Journal */
+.prompt { margin: 0 0 0.7rem; color: var(--rose-deep); font-weight: 500; }
+.moods { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.9rem; }
+.mood {
+  padding: 0.2rem 0.8rem;
+  background: var(--field);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.mood[aria-pressed="true"] { background: var(--blush); border-color: var(--rose-deep); color: var(--rose-deep); font-weight: 600; }
+.paper {
+  display: block; width: 100%; min-height: 13rem; resize: vertical;
+  padding: 0 0.4rem;
+  background-color: var(--field);
+  background-image: repeating-linear-gradient(transparent, transparent calc(2rem - 1px), var(--line) 2rem);
+  background-attachment: local;
+  border: 1.5px solid var(--line);
+  border-radius: 1rem;
+  line-height: 2rem;
+}
+.paper:focus { border-color: var(--rose); }
+.meta { display: flex; justify-content: space-between; gap: 0.5rem; margin-top: 0.4rem; font-size: 0.8rem; color: var(--muted); }
+
+/* Gratitude */
+.grat { display: grid; gap: 0.55rem; }
+.grat label { display: grid; grid-template-columns: auto 1fr; gap: 0.6rem; align-items: center; }
+.grat .heart { width: 1.2rem; height: 1.2rem; fill: var(--rose); }
+
+footer { margin-top: 0.5rem; text-align: center; color: var(--muted); font-size: 0.82rem; }
+
+@media (max-width: 560px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-side { justify-content: space-between; }
+  .spark.s4 { right: 1rem; }
+}
+</style>
+
+<div class="app" dir="rtl" lang="fa">
+  <header class="hero">
+    <svg class="spark s1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"/></svg>
+    <svg class="spark s2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"/></svg>
+    <svg class="spark s3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"/></svg>
+    <svg class="spark s4" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"/></svg>
+
+    <div class="hero-main">
+      <div class="crest" aria-hidden="true">
+        <svg viewBox="0 0 64 50">
+          <defs>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" style="stop-color:var(--gold)"/>
+              <stop offset="1" style="stop-color:var(--rose)"/>
+            </linearGradient>
+          </defs>
+          <path d="M6 40 L2 13 L18 25 L32 7 L46 25 L62 13 L58 40 Z" fill="url(#gold)"/>
+          <rect x="6" y="41" width="52" height="7" rx="3.5" fill="url(#gold)"/>
+          <circle cx="2" cy="12" r="3.6" style="fill:var(--rose-deep)"/>
+          <circle cx="32" cy="6" r="3.9" style="fill:var(--rose-deep)"/>
+          <circle cx="62" cy="12" r="3.6" style="fill:var(--rose-deep)"/>
+          <circle cx="18" cy="44.5" r="1.5" style="fill:var(--card)"/>
+          <circle cx="32" cy="44.5" r="1.5" style="fill:var(--card)"/>
+          <circle cx="46" cy="44.5" r="1.5" style="fill:var(--card)"/>
+        </svg>
+      </div>
+      <p class="eyebrow" id="greet"></p>
+      <h1>دفترچه سلطنتی</h1>
+      <p class="date" id="date-fa"></p>
+      <p class="date-en" id="date-en" dir="ltr"></p>
+    </div>
+
+    <div class="hero-side">
+      <div class="ring" role="img" id="ring" aria-label="پیشرفت امروز">
+        <svg viewBox="0 0 80 80" aria-hidden="true">
+          <circle class="track" cx="40" cy="40" r="34" fill="none" stroke-width="7"/>
+          <circle class="prog" id="ring-prog" cx="40" cy="40" r="34" fill="none" stroke-width="7" stroke-dasharray="213.63" stroke-dashoffset="213.63"/>
+        </svg>
+        <div class="ring-num"><span id="ring-pct">۰٪</span><small id="ring-sub">انجام شده</small></div>
+      </div>
+      <p class="affirm"><b>جمله امروز</b><span id="affirm"></span></p>
+    </div>
+
+    <nav class="daynav" aria-label="انتخاب روز">
+      <button class="btn" type="button" id="prev">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>روز قبل
+      </button>
+      <button class="btn" type="button" id="today">امروز</button>
+      <button class="btn" type="button" id="next">روز بعد
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <span class="spacer"></span>
+      <button class="btn" type="button" id="theme-btn" aria-label="تغییر حالت روز و شب">حالت شب</button>
+    </nav>
+  </header>
+
+  <p class="note" id="storage-note" hidden>ذخیره‌سازی این مرورگر غیرفعال است، پس نوشته‌ها بعد از بستن صفحه از بین می‌روند.</p>
+
+  <main class="board">
+    <section class="card" aria-labelledby="h-plan">
+      <div class="card-head">
+        <h2 id="h-plan">برنامه روزانه</h2>
+        <span class="chip" id="plan-count">۰ برنامه</span>
+      </div>
+      <hr class="divider">
+      <p class="empty" id="task-empty">هنوز برنامه‌ای برای این روز ننوشتی. اولین ساعت و کارت را پایین اضافه کن.</p>
+      <ul class="list" id="task-list"></ul>
+      <form class="add" id="task-form" autocomplete="off">
+        <input class="field t" type="time" id="task-time" value="09:00" aria-label="ساعت">
+        <input class="field x" type="text" id="task-text" placeholder="چه کاری داری؟" aria-label="عنوان برنامه">
+        <button class="btn btn-primary" type="submit">افزودن</button>
+      </form>
+      <p class="hint" id="sample-hint" hidden>موارد با برچسب «نمونه» فقط برای شروع هستند؛ هر وقت خواستی پاکشان کن.</p>
+    </section>
+
+    <section class="card rose" aria-labelledby="h-goals">
+      <div class="card-head">
+        <h2 id="h-goals">اهداف امروز</h2>
+        <span class="chip" id="goal-count">۰ از ۰</span>
+      </div>
+      <hr class="divider">
+      <p class="empty" id="goal-empty">امروز دوست داری به چه چیزی برسی؟ یک هدف کوچک هم کافی است.</p>
+      <ul class="list" id="goal-list"></ul>
+      <form class="add" id="goal-form" autocomplete="off">
+        <input class="field x" type="text" id="goal-text" placeholder="هدف امروزت را بنویس" aria-label="هدف امروز">
+        <button class="btn btn-primary" type="submit">افزودن</button>
+      </form>
+    </section>
+
+    <section class="card lilac" aria-labelledby="h-journal">
+      <div class="card-head">
+        <h2 id="h-journal">ژورنال</h2>
+        <span class="chip" id="word-count">۰ کلمه</span>
+      </div>
+      <hr class="divider">
+      <p class="prompt" id="prompt"></p>
+      <div class="moods" id="moods" role="group" aria-label="حال امروز"></div>
+      <textarea class="paper" id="journal" placeholder="هر چه در دلت هست، اینجا بنویس…" aria-label="متن ژورنال"></textarea>
+      <div class="meta"><span id="save-status">آماده نوشتن</span><span>فقط خودت می‌خوانی</span></div>
+    </section>
+
+    <section class="card rose" aria-labelledby="h-grat">
+      <div class="card-head">
+        <h2 id="h-grat">سه قدردانی</h2>
+      </div>
+      <hr class="divider">
+      <div class="grat">
+        <label><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg><input class="field" type="text" id="g0" aria-label="قدردانی اول" placeholder="امروز بابت چه چیزی ممنونی؟"></label>
+        <label><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg><input class="field" type="text" id="g1" aria-label="قدردانی دوم" placeholder="یک آدم یا لحظه خوب"></label>
+        <label><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg><input class="field" type="text" id="g2" aria-label="قدردانی سوم" placeholder="چیزی از خودت که دوستش داری"></label>
+      </div>
+    </section>
+  </main>
+
+  <footer>هر چه می‌نویسی فقط در همین مرورگر ذخیره می‌شود.</footer>
+</div>
+
+<script>
+(function () {
+  var $ = function (s) { return document.querySelector(s); };
+  var faDigits = '۰۱۲۳۴۵۶۷۸۹';
+  var fa = function (v) { return String(v).replace(/\d/g, function (d) { return faDigits[d]; }); };
+  var KEY = 'royal-planner-v1', THEME = 'royal-planner-theme';
+  var storageOK = true;
+
+  function read(k) { try { return localStorage.getItem(k); } catch (e) { storageOK = false; return null; } }
+  function write(k, v) { try { localStorage.setItem(k, v); } catch (e) { storageOK = false; } }
+
+  var db = null;
+  try { db = JSON.parse(read(KEY) || 'null'); } catch (e) { db = null; }
+  if (!db || typeof db !== 'object' || !db.days) db = { days: {}, seeded: false };
+
+  function persist() { write(KEY, JSON.stringify(db)); $('#storage-note').hidden = storageOK; }
+
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  var keyOf = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
+  var uid = function () { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); };
+
+  var cur = new Date(); cur.setHours(12, 0, 0, 0);
+  function isToday() { return keyOf(cur) === keyOf(new Date()); }
+  function day() {
+    var k = keyOf(cur);
+    if (!db.days[k]) db.days[k] = { tasks: [], goals: [], journal: '', mood: '', grat: ['', '', ''] };
+    return db.days[k];
+  }
+
+  // Example content on the very first visit so the panel does not open empty.
+  if (!db.seeded) {
+    var d0 = day();
+    d0.tasks = [
+      { id: uid(), time: '07:30', text: 'یک لیوان آب و کمی کشش صبحگاهی', done: true, sample: true },
+      { id: uid(), time: '10:00', text: 'کار روی مهم‌ترین پروژه روز', done: false, sample: true },
+      { id: uid(), time: '13:00', text: 'ناهار و یک استراحت کوتاه', done: false, sample: true },
+      { id: uid(), time: '19:30', text: 'کتاب یا سریال مورد علاقه', done: false, sample: true }
+    ];
+    d0.goals = [
+      { id: uid(), text: 'حداقل ۸ لیوان آب بنوشم', done: false, sample: true },
+      { id: uid(), text: 'قبل از خواب ژورنال بنویسم', done: false, sample: true }
+    ];
+    db.seeded = true;
+    persist();
+  }
+
+  var affirmations = [
+    'تو لایق بهترین‌ها هستی و امروز قدمی به سمتشان برمی‌داری.',
+    'آرام و باوقار، هر روز یک گام جلوتر.',
+    'کارهای کوچک، هر روز، یک زندگی باشکوه می‌سازند.',
+    'امروز برای خودت وقت بگذار؛ ارزشش را داری.',
+    'هر چیزی که برایش تلاش می‌کنی، دارد به تو نزدیک می‌شود.',
+    'مهربان باش، با دیگران و بیشتر از همه با خودت.',
+    'تاج را روی سرت نگه دار؛ روز تازه‌ای شروع شده.'
+  ];
+  var prompts = [
+    'امروز چه چیزی باعث شد لبخند بزنی؟',
+    'اگر فردا کامل باشد، چه شکلی است؟',
+    'امروز از چه چیزی در خودت ممنونی؟',
+    'چه حرفی هست که دوست داری به خودت بزنی؟',
+    'امروز چه چیز کوچکی یاد گرفتی؟',
+    'چه چیزی را رها کنی، سبک‌تر می‌شوی؟',
+    'بزرگ‌ترین آرزویت برای این هفته چیست؟'
+  ];
+  var moods = ['عالی 🥰', 'شاد 😊', 'آرام 🌷', 'خسته 😴', 'دلگیر 🌧️'];
+
+  var fmtFa = new Intl.DateTimeFormat('fa-IR-u-ca-persian', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  var fmtEn = new Intl.DateTimeFormat('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+
+  function svgX() {
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+  }
+
+  function makeRow(item, listName, withTime) {
+    var li = document.createElement('li');
+    li.className = 'item' + (item.done ? ' done' : '');
+
+    var cb = document.createElement('input');
+    cb.type = 'checkbox'; cb.className = 'chk'; cb.id = 'c-' + item.id; cb.checked = !!item.done;
+    cb.addEventListener('change', function () {
+      item.done = cb.checked;
+      li.classList.toggle('done', item.done);
+      persist(); renderProgress();
+    });
+
+    var label = document.createElement('label');
+    label.setAttribute('for', cb.id);
+    if (withTime && item.time) {
+      var tm = document.createElement('span');
+      tm.className = 'time'; tm.textContent = fa(item.time);
+      label.appendChild(tm);
+    }
+    var tx = document.createElement('span');
+    tx.className = 'txt'; tx.textContent = item.text;
+    label.appendChild(tx);
+    if (item.sample) {
+      var b = document.createElement('span');
+      b.className = 'badge'; b.textContent = 'نمونه';
+      label.appendChild(b);
+    }
+
+    var del = document.createElement('button');
+    del.type = 'button'; del.className = 'del'; del.setAttribute('aria-label', 'حذف');
+    del.innerHTML = svgX();
+    del.addEventListener('click', function () {
+      var d = day();
+      d[listName] = d[listName].filter(function (x) { return x.id !== item.id; });
+      persist(); renderLists();
+    });
+
+    li.appendChild(cb); li.appendChild(label); li.appendChild(del);
+    return li;
+  }
+
+  function renderLists() {
+    var d = day();
+    var tl = $('#task-list'); tl.textContent = '';
+    var sorted = d.tasks.slice().sort(function (a, b) { return (a.time || '99:99').localeCompare(b.time || '99:99'); });
+    sorted.forEach(function (t) { tl.appendChild(makeRow(t, 'tasks', true)); });
+    $('#task-empty').hidden = sorted.length > 0;
+    $('#plan-count').textContent = fa(sorted.length) + ' برنامه';
+
+    var gl = $('#goal-list'); gl.textContent = '';
+    d.goals.forEach(function (g) { gl.appendChild(makeRow(g, 'goals', false)); });
+    $('#goal-empty').hidden = d.goals.length > 0;
+
+    var anySample = d.tasks.concat(d.goals).some(function (x) { return x.sample; });
+    $('#sample-hint').hidden = !anySample;
+    renderProgress();
+  }
+
+  function renderProgress() {
+    var d = day();
+    var all = d.tasks.concat(d.goals);
+    var done = all.filter(function (x) { return x.done; }).length;
+    var pct = all.length ? Math.round(done / all.length * 100) : 0;
+    var C = 213.63;
+    $('#ring-prog').style.strokeDashoffset = String(C * (1 - pct / 100));
+    $('#ring-pct').textContent = fa(pct) + '٪';
+    $('#ring-sub').textContent = all.length ? fa(done) + ' از ' + fa(all.length) : 'شروع کن';
+    $('#ring').setAttribute('aria-label', all.length ? fa(done) + ' کار از ' + fa(all.length) + ' کار انجام شده' : 'هنوز کاری ثبت نشده');
+    var gDone = d.goals.filter(function (x) { return x.done; }).length;
+    $('#goal-count').textContent = fa(gDone) + ' از ' + fa(d.goals.length);
+  }
+
+  function countWords(t) { t = t.trim(); return t ? t.split(/\s+/).length : 0; }
+
+  function renderMoods() {
+    var box = $('#moods'); box.textContent = '';
+    moods.forEach(function (m) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'mood'; b.textContent = m;
+      b.setAttribute('aria-pressed', day().mood === m ? 'true' : 'false');
+      b.addEventListener('click', function () {
+        var d = day();
+        d.mood = d.mood === m ? '' : m;
+        persist(); renderMoods();
+      });
+      box.appendChild(b);
+    });
+  }
+
+  function greeting() {
+    if (!isToday()) return 'برنامه‌ی این روز';
+    var h = new Date().getHours();
+    if (h < 5) return 'شب بخیر، بانوی من';
+    if (h < 12) return 'صبح بخیر، بانوی من';
+    if (h < 17) return 'روز بخیر، بانوی من';
+    if (h < 21) return 'عصر بخیر، بانوی من';
+    return 'شب بخیر، بانوی من';
+  }
+
+  function loadDay() {
+    var d = day();
+    var doy = Math.floor((cur - new Date(cur.getFullYear(), 0, 0)) / 864e5);
+    $('#greet').textContent = greeting();
+    $('#date-fa').textContent = fmtFa.format(cur);
+    $('#date-en').textContent = fmtEn.format(cur);
+    $('#affirm').textContent = affirmations[doy % affirmations.length];
+    $('#prompt').textContent = prompts[doy % prompts.length];
+    $('#today').disabled = isToday();
+    $('#journal').value = d.journal || '';
+    $('#word-count').textContent = fa(countWords(d.journal || '')) + ' کلمه';
+    $('#save-status').textContent = 'آماده نوشتن';
+    for (var i = 0; i < 3; i++) $('#g' + i).value = (d.grat && d.grat[i]) || '';
+    renderMoods();
+    renderLists();
+  }
+
+  function shift(n) { cur.setDate(cur.getDate() + n); loadDay(); }
+  $('#prev').addEventListener('click', function () { shift(-1); });
+  $('#next').addEventListener('click', function () { shift(1); });
+  $('#today').addEventListener('click', function () { cur = new Date(); cur.setHours(12, 0, 0, 0); loadDay(); });
+
+  $('#task-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var input = $('#task-text'), text = input.value.trim();
+    if (!text) { input.focus(); return; }
+    day().tasks.push({ id: uid(), time: $('#task-time').value, text: text, done: false });
+    input.value = '';
+    persist(); renderLists(); input.focus();
+  });
+  $('#goal-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var input = $('#goal-text'), text = input.value.trim();
+    if (!text) { input.focus(); return; }
+    day().goals.push({ id: uid(), text: text, done: false });
+    input.value = '';
+    persist(); renderLists(); input.focus();
+  });
+
+  var saveTimer = null;
+  $('#journal').addEventListener('input', function (e) {
+    var d = day(); d.journal = e.target.value;
+    $('#word-count').textContent = fa(countWords(d.journal)) + ' کلمه';
+    $('#save-status').textContent = 'در حال ذخیره…';
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function () { persist(); $('#save-status').textContent = storageOK ? 'ذخیره شد' : 'ذخیره نشد'; }, 350);
+  });
+  [0, 1, 2].forEach(function (i) {
+    $('#g' + i).addEventListener('input', function (e) {
+      var d = day(); if (!d.grat) d.grat = ['', '', ''];
+      d.grat[i] = e.target.value; persist();
+    });
+  });
+
+  // Theme
+  var root = document.documentElement;
+  var savedTheme = read(THEME);
+  if (savedTheme === 'dark' || savedTheme === 'light') root.setAttribute('data-theme', savedTheme);
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function themeLabel() { $('#theme-btn').textContent = isDark() ? 'حالت روز' : 'حالت شب'; }
+  $('#theme-btn').addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next); write(THEME, next); themeLabel();
+  });
+  themeLabel();
+
+  $('#storage-note').hidden = storageOK;
+  loadDay();
+})();
+</script>
+
+</body></html>
